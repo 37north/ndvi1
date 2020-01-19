@@ -9,7 +9,7 @@ class Admin(db.Model):
 	pwdhash = db.Column(db.String(54))
 	
 	def __init__(self, username, pwdhash):
-		self.username = pwdhash.lower()
+		self.username = username.lower()
 		self.set_password(pwdhash)
 	
 	
