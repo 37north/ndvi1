@@ -3,8 +3,8 @@ from wtforms import StringField, PasswordField, SubmitField
 from wtforms.validators import DataRequired, Email, Length
 
 
+
 class adminForm(Form):
-	uname = StringField('User Name')
-	password = PasswordField('Password')
+	username = StringField('User Name', validators = [DataRequired('What is your username ? ')])
+	pwdhash = PasswordField('Password', validators = [DataRequired()])
 	submit = SubmitField('Submit')
-	
